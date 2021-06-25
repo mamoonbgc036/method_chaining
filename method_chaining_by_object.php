@@ -24,4 +24,14 @@ $ob = new demo();
 $bills = $ob->setPrice(4)->calculateBill(13)->getBill();
 
 echo $bills;
+
+class Methodchaining{
+	private static $_instance;
+
+	public static function getInstance(){
+		self::$_instance = new Methodchaining();
+
+		return self::$_instance;
+	}
+}
 ?>
