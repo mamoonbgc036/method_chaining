@@ -34,4 +34,17 @@ class Methodchaining{
 		return self::$_instance;
 	}
 }
+
+class Test{
+	private $_name;
+	public function __construct($name){
+		$this->_name = $name;
+	}
+}
+
+class AnotherTest extends Test{
+	public function __construct($name){
+		parent::__construct($name);
+	}
+}
 ?>
