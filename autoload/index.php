@@ -13,3 +13,7 @@
 	print "<br/>";
 
 	new app\humans\student();
+
+	print "<br/>";
+
+	new app\dog();
