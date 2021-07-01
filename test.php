@@ -3,12 +3,17 @@
 	
 	class Test{
 		public $name;
-		public $age = 20;
+		private $age = 20;
+
+		public function show(){
+			return $this->age;
+		}
 	}
 
-	$x = new Test();
+	class Child extends Test{
 
-	$y = clone $x;
-	$x = null;
+	}
 
-	var_dump($y->age);
+	$x = new Child();
+
+	var_dump($x->show());
