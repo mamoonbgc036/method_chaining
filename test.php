@@ -1,9 +1,14 @@
 <?php
 
-	namespace App;
-
+	
 	class Test{
-		public function __construct(){
-			echo "Test";
-		}
+		public $name;
+		public $age = 20;
 	}
+
+	$x = new Test();
+
+	$y = & $x;
+	$x = null;
+
+	var_dump($x);

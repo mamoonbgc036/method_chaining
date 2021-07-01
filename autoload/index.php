@@ -1,12 +1,12 @@
 <?php 
 
-	// function my_loader($class){
-	// 	include_once str_replace("app\\", "/", $class).".php";
-	// }
+	function my_loader($class){
+		include_once str_replace("app\\", "/", $class).".php";
+	}
 
-	// spl_autoload_register("my_loader");
+	spl_autoload_register("my_loader");
 
-	require_once "vendor/autoload.php";
+	//require_once "vendor/autoload.php";
 
 	new app\animals\dog();
 
