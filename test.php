@@ -8,7 +8,7 @@
 
 	$x = new Test();
 
-	$y = & $x;
+	$y = clone $x;
 	$x = null;
 
-	var_dump($x);
+	var_dump($y->age);
