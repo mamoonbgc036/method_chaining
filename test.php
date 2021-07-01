@@ -2,18 +2,20 @@
 
 	
 	class Test{
-		public $name;
+		public $name = "mamoon";
 		private $age = 20;
 
-		public function show(){
-			return $this->age;
-		}
+		// public function show(){
+		// 	return $this->age;
+		// }
 	}
 
-	class Child extends Test{
+	// class Child extends Test{
 
-	}
+	// }
 
-	$x = new Child();
+	$x = new Test();
+	$y = clone $x;
+	$y->name = "noman";
 
-	var_dump($x->show());
+	echo $x->name;
