@@ -1,33 +1,27 @@
 <?php
 
-	
-	class Test{
-		public $name;
-		public $age = 20;
+	class CloneableUser
+		{
+		    public $name;
+		    public $lastName;
 
-		// public function show(){
-		// 	return $this->age;
-		// }
-	}
-
-	class Child extends Test{
-		// public function __construct($name){
-		// 	$this->name = $name;
-		// }
-
-		public function show(){
-			return $this->name;
+		    /**
+		     * This method will be invoked by a clone operator and will prepend "Copy " to the
+		     * name and lastName properties.
+		     */
+		    public function __clone()
+		    {
+		        $this->name = "Copy " . $this->name;
+		        $this->lastName = "Copy " . $this->lastName;
+		    }
 		}
-	}
 
-	$x = new Test();
+		$user1 = new CloneableUser();
+$user1->name = "John";
+$user1->lastName = "Doe";
 
-	$y = clone $x;
+$user2 = clone $user1; // triggers the __clone magic method
 
-	$y->age = 50;
+echo $user2->name;     // Copy John
+echo $user2->lastName; // Copy Doe
 
-	echo $x-> age;
-
-	echo "<br/>";
-
-	echo $y -> age;
