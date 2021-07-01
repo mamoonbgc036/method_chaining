@@ -1,7 +1,16 @@
 <?php
-	$x = [10,12,13];
-	print_r($x);
-	array_shift($x);
-	print "<br/>";
-	print_r($x);
+	
+	function checkDouble($x){
+		$a = $x[0];
+		while (count($x) >= 0) {
+			for ($i=1; $i <= count($x) ; $i++) { 
+				if($a==$x[$i]){
+					return true;
+				}
+			}
+			array_shift($x);
+		}
+		return false;
+	}
 
+	echo checkDouble([1,2,3]);
