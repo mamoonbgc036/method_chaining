@@ -14,3 +14,6 @@
 	}
 
 	echo checkDouble([1,2,3]);
+
+	$string = "hello world";
+	$trimString = trim($string,"ello");
