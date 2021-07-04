@@ -11,9 +11,19 @@
 
   echo isPrime(6);
 
-  $name;
 
- echo isset($name) ? $name : "not applicable";
- print "<br/>";
 
-echo $color = $color ?? "red";
+class Test{
+      private $name;
+        
+        public function __construct($name){
+          $this->name = $name;
+            $this->show();
+        }
+        
+        private function show(){
+          echo $this->name;
+        }
+    }
+    
+    new Test("noman");
