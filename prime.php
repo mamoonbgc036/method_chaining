@@ -14,4 +14,6 @@
   $name;
 
  echo isset($name) ? $name : "not applicable";
+ print "<br/>";
 
+echo $color = $color ?? "red";
