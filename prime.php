@@ -10,3 +10,8 @@
   }
 
   echo isPrime(6);
+
+  $name;
+
+ echo isset($name) ? $name : "not applicable";
+
