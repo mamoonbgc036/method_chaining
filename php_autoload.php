@@ -1,13 +1,11 @@
 <?php
-	use App\Test;
 
-	function myAutoload($class){
-		$x = str_replace("App\\", "", $class);
-		include $x.".php";
+
+	function myautoload($class){
+		include str_replace("App\\", "", $class).".php";
 	}
+	spl_autoload_register("myautoload");
 
-	spl_autoload_register("myAutoload");
+	//use App;
 
-	//include "App\\test.php";
-
-	new Test();
+	new App\Test();

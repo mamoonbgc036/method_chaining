@@ -1,19 +1,9 @@
 <?php
-	
-	function checkDouble($x){
-		$a = $x[0];
-		while (count($x) >= 0) {
-			for ($i=1; $i <= count($x) ; $i++) { 
-				if($a==$x[$i]){
-					return true;
-				}
-			}
-			array_shift($x);
+	namespace App;
+	class Test{
+		public function __construct(){
+			echo "testing";
 		}
-		return false;
 	}
 
-	echo checkDouble([1,2,3]);
-
-	$string = "hello world";
-	$trimString = trim($string,"ello");
+	
