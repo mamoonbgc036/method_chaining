@@ -27,3 +27,25 @@ class Test{
     }
     
     new Test("noman");
+
+    trait x{
+      public $name;
+      public function take($name){
+        $this->name = $name;
+      }
+    }
+
+    trait y{
+      public function show(){
+        echo $this->name;
+      }
+    }
+
+    class Main{
+      use x;
+      use y;
+    }
+
+    $z = new Main();
+    $z->take("mamoon");
+    $z->show();
