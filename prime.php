@@ -42,8 +42,8 @@ class Test{
     }
 
     class Main{
-      use x;
       use y;
+      use x;
     }
 
     $z = new Main();
