@@ -1,16 +1,11 @@
 <?php
-	namespace App;
 
-	use App\auto\load\show;
+	include_once "clifton/delux/autoload.php";
 
-	function my_autoload($class){
-		include_once str_replace("App\\","",$class).".php";
-		//echo $class;die();
-	}
+	//use App\auto\load\show;
 
-	spl_autoload_register("App\my_autoload");
 
-	new show();
+	new App\auto\load\show();
 
 	// use App\auto\load\show;
 	// new show();
