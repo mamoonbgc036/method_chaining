@@ -1,11 +1,13 @@
 <?php
-	namespace app;
+	namespace App;
 
-	use App\Test;
-	function myautoload($class){
+	use App\auto\load\show;
+
+	function my_autoload($class){
 		include_once str_replace("App\\","",$class).".php";
+		//echo $class;die();
 	}
 
-	spl_autoload_register("\app\myautoload");
+	spl_autoload_register("App\my_autoload");
 
-	new test();
+	new show();
