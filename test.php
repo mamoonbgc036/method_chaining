@@ -25,7 +25,7 @@
 
 	new Test("mamoon",14,32);
 
-	function add($i){
+	function add(&$i){
 		$i++;
 		echo $i;
 	}
