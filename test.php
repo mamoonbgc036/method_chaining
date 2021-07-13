@@ -34,4 +34,10 @@
 	add($i);
 	echo $i;
 
+	$x="abc";
+	$$x = 200;
+	echo $x;
+	echo $$x;
+	echo $abc;
+
 	
