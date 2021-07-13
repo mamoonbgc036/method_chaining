@@ -25,4 +25,13 @@
 
 	new Test("mamoon",14,32);
 
+	function add($i){
+		$i++;
+		echo $i;
+	}
+
+	$i=10;
+	add($i);
+	echo $i;
+
 	
