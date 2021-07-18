@@ -1,29 +1,12 @@
 <?php
 
- class Test{
-	public $name;
-	public $eligible = false;
-	public static $instance;
+	class Test{
 
-	public static function getInstance(){
-		if (!isset($instance)){
-			static::$instance = new Test();
+		public static function get_instance($name){
+			echo $name;
 		}
-		return static::$instance;
+
 	}
 
- 	public function get_Student($name){
- 		$this->name=$name;
- 		return $this;
- 	}
-
- 	public function isAbove35($age){
- 		if ($age > 35){
- 			$this->eligible = true;
- 		}
- 		return $this->eligible;
- 	}
- }
-
- Test::getInstance()->get_Student("mamoon")->isAbove35(36);
+	Test::get_instance("mamoon");
 	
