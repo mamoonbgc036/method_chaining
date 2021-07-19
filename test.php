@@ -1,43 +1,47 @@
 <?php
 
 	class Test{
-		static $name;
-		static $eligibility = false;
+		private $_name;
+		private $_eligibility = false;
+		private static $_instance;
 
-		public static function get_instance($properties){
-			//var_dump($properties);
-			static::$name = $properties[0];
-			self::checkAge($properties[1]);
-			self::checkProffesion($properties[2]);
+		public static function getInstance(){
+			if (!isset($_instance)){
+				self::$_instance = new Test();	
+			}
+			return self::$_instance;
 		}
 
-		public static function checkAge($age){
-			if ($age > 35){
-				self::$eligibility = true;
-				self::result();
+		public function check($properties){
+			$this->_name = $properties[0];
+			$this->checkAge($properties[1]);
+			$this->checkProfession($properties[2]);
+		}
+
+		private function checkAge($age){
+			if ( $age > 35 ){
+				$this->_eligibility = true;
+				$this->result();
 			}
 		}
 
-		public static function checkProffesion($profession){
-			if ( $profession == "farmar"){
-				self::$eligibility = true;
-				self::result();
-			} elseif ($profession == "student") {
-				self::$eligibility = true;
-				self::result();
+		private function checkProfession($profession){
+			if ( $profession == "farmar" || $profession == "student" ){
+				$this->_eligibility = true;
+				$this->result();
 			} else{
-				self::result();
+				$this->result();
 			}
 		}
 
-		public static function result(){
-			if (!static::$eligibility){
-				echo static::$name ." is not eligible to take the vaccin.";die();
+		private function result(){
+			if ( !$this->_eligibility ){
+				echo $this->_name ." is not eligible to take the vaccin.";die();
 			}
-			echo static::$name ." is eligible to take the vaccin.";die();
+			echo $this->_name ." is eligible to take the vaccin.";die();
 		}
-
+		
 	}
 
-	Test::get_instance(["mamoon",36,"jobholder"]);
+	Test::getInstance()->check(["mamoon",35,"jobholder"]);
 	
