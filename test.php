@@ -36,14 +36,16 @@
 
 		private function result(){
 			if ( !$this->_eligibility ){
-				echo $this->_name ." is not eligible to take the vaccin.";die();
+				return $this->_name ." is not eligible to take the vaccin.";
 			}
-			echo $this->_name ." is eligible to take the vaccin.";die();
+			return $this->_name ." is eligible to take the vaccin.";
 		}
 		
 	}
 
 	$x = Test::getInstance();
-	$x->check(["mamoon",35,"jobholder"]);
+	echo $x->check(["mamoon",36,"jobholder"]);
+	echo '\n';
+	echo $x->check(['noman',20,'jobholder']);
 
 	
