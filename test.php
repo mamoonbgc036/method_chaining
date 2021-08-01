@@ -43,5 +43,7 @@
 		
 	}
 
-	Test::getInstance()->check(["mamoon",35,"jobholder"]);
+	$x = Test::getInstance();
+	$x->check(["mamoon",35,"jobholder"]);
+
 	
