@@ -16,3 +16,10 @@ switch($num){
 	echo "i am twelve";
 	break;
 }
+
+$n = 1;
+
+while($n<10){
+	echo $n."\n";
+	$n++;
+}
