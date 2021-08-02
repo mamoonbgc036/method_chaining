@@ -23,3 +23,8 @@ while($n<10){
 	echo $n."\n";
 	$n++;
 }
+
+do {
+	echo $n."\n";
+	$n++;
+} while ( $n < 10);
