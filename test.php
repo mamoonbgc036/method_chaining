@@ -17,14 +17,11 @@ switch($num){
 	break;
 }
 
-$n = 1;
-
-while($n<10){
-	echo $n."\n";
-	$n++;
+for ($i=0; $i < 10 ; $i++) { 
+	for ($j=0; $j < 10 ; $j++) { 
+		if( $i == $j ){
+			echo "i is ".$i."\n";
+			echo "j is ".$j."\n";
+		}
+	}
 }
-
-do {
-	echo $n."\n";
-	$n++;
-} while ( $n < 10);
