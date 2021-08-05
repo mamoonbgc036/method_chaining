@@ -1,9 +1,8 @@
 <?php
 
-$filename = "test.txt";    
-$handle = fopen($filename, "r");//open file in read mode    
+$fp = fopen('test.txt', 'a');//opens file in append mode  
+fwrite($fp, ' this is additional text ');  
+fwrite($fp, 'appending data');  
+fclose($fp);  
   
-$contents = fread($handle, filesize($filename));//read file    
-  
-echo $contents;//printing data of file  
-fclose($handle);//close file   
+echo "File appended successfully";   
