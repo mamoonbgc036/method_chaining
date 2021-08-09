@@ -1,23 +1,14 @@
 <?php
 
-echo __FILE__;
-echo "\n";
-echo __DIR__;
-echo "\n";
+ $name = "mamoon";
 
-function name(){
-	return __FUNCTION__;
-}
+ switch ($name) {
+ 	case 'mamon':
+ 		echo $name;
+ 		break;
+ 	
+ 	default:
+ 		echo "default";
+ 		break;
+ }
 
-echo name();
-
-echo "\n";
-
-class Test{
-	public function getClassName(){
-		return __CLASS__;
-	}
-}
-
-$x = new Test();
-echo $x->getClassName();
