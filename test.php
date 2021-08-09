@@ -1,14 +1,4 @@
 <?php
 
- $name = "mamoon";
-
- switch ($name) {
- 	case 'mamon':
- 		echo $name;
- 		break;
- 	
- 	default:
- 		echo "default";
- 		break;
- }
+ echo $_SERVER['HTTP_HOST'];
 
