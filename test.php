@@ -1,36 +1,20 @@
 <?php  
- class Str
-{
-  private $s = '';
+    class dog {
+        public $Name;
 
-  private $functions = [
-    'length' => 'strlen',
-    'upper' => 'strtoupper',
-    'lower' => 'strtolower'
-    // map more method to functions
-  ];
+        public function bark() {
+            print "Woof!\n";
+        }
 
-  public function __construct(string $s)
-  {
-    $this->s = $s;
-  }
+        // public function meow() {
+            // print "Dogs don't meow!\n";
+        // }
 
-  public function __call($method, $args)
-  {
-    if (!in_array($method, array_keys($this->functions))) {
-      throw new BadMethodCallException();
+        public function __call($function, $args) {
+            $args = implode(', ', $args);
+            print "Call to $function() with args '$args' failed!\n";
+        }
     }
 
-    array_unshift($args, $this->s);
-
-    return call_user_func_array($this->functions[$method], $args);
-  }
-}
-
-$string = "Hello,World";
-
-$s = new Str($string);
-
-echo $s->upper() . '<br>'; // HELLO, WORLD!
-echo $s->lower() . '<br>'; // hello, world!
-echo $s->length() . '<br>'; 
+    $poppy = new dog;
+    $poppy->meow("foo", "bar", "baz");
