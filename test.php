@@ -88,3 +88,19 @@ class Test1
   // here how calculation is happend is hiden from the user. this is abstraction.
 
   echo $x->calArea();
+
+  $x = new Another(50,10);
+
+  // here how calculation is happend is hiden from the user. this is abstraction.
+
+  echo $x->calArea();
+
+  // php encapsulation 
+
+  //when the properties and method of an object is encapsulated in a single class is called encapsulation.
+
+  // php inheritance
+
+  // php inheritance 
+
+  // when class x extends class y occured inheritance. inheritance can also be occured by trait. using trait multiple inheritance can be achieved.
