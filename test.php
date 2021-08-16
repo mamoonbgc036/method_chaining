@@ -62,3 +62,29 @@ class Test1
     }  
     //call function with call name as a argument  
     typehint(new Test1());  
+
+ // php abstruction
+
+  abstract class Test{
+    public $len;
+    public $wid;
+
+    public function __construct($len,$wid){
+      $this->len = $len;
+      $this->wid = $wid;
+    }
+
+    public function calArea(){
+      return $this->len*$this->wid;
+    }
+  }
+
+  class Another extends Test{
+
+  }
+
+  $x = new Another(50,10);
+
+  // here how calculation is happend is hiden from the user. this is abstraction.
+
+  echo $x->calArea();
