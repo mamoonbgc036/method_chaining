@@ -94,6 +94,18 @@ class Test1
   // here how calculation is happend is hiden from the user. this is abstraction.
 
   echo $x->calArea();
+    try{
+
+    $con = new PDO("mysql:host=localhost;dbname=test","root","");
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+
+    echo "connected";
+
+  } catch (Exception $e){
+
+    echo $e->getMessage();
+
+  }
 
   // php encapsulation 
 
