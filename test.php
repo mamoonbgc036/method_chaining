@@ -1,4 +1,14 @@
 <?php  
+
+ try{
+
+  $con = new PDO("mysql:host=localhost;dbname=tests", "root","");
+
+  echo "connected";
+
+ }catch(PDOException $e){
+  echo $e->getMessage();
+ }
     class dog {
         public $Name;
 
