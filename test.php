@@ -126,3 +126,7 @@ class Test1
   // php inheritance 
 
   // when class x extends class y occured inheritance. inheritance can also be occured by trait. using trait multiple inheritance can be achieved.
+
+$dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass, array(
+    PDO::ATTR_PERSISTENT => true
+));
